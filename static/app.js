@@ -61,6 +61,7 @@ function init(value) {
         };
 
         var layout_bar = {
+            title: `<b>Top 10 OTUs found</b>`,
             yaxis: {
                 align: "left"
             },
@@ -68,7 +69,7 @@ function init(value) {
                 l: 80,
                 r: 0,
                 b: 100,
-                t: 10,
+                t: 30,
                 pad: 4
             }
         };
@@ -92,14 +93,18 @@ function init(value) {
             }
         };
         var layout_bubbles = {
+            title: `<b>All UTOs found in individual</b>`,
             xaxis: {
                 title: "OTU ID"
+            },
+            yaxis: {
+                title: "Sample Values"
             },
             margin: {
                 l: 50,
                 r: 10,
                 b: 100,
-                t: 10,
+                t: 50,
                 pad: 4
             }
         };
@@ -137,7 +142,7 @@ function init(value) {
             height: 350,
             margin: {
                 l: 50,
-                r: 0,
+                r: 10,
                 b: 0,
                 t: 0,
             }
@@ -205,7 +210,3 @@ function optionChanged(value) {
         Plotly.restyle("gauge", "title.text", [`${wf} scrubs per Week`]);
     });
 }
-
-
-
-
